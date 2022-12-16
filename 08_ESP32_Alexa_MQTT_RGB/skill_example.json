@@ -1,0 +1,111 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "room led lights",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "rgbled",
+                    "slots": [
+                        {
+                            "name": "rgbcolor",
+                            "type": "ctrlcolor"
+                        },
+                        {
+                            "name": "rgbstate",
+                            "type": "ctrlstate"
+                        }
+                    ],
+                    "samples": [
+                        "{rgbstate} {rgbcolor}",
+                        "{rgbcolor} {rgbstate}",
+                        "{rgbstate} {rgbcolor} led",
+                        "{rgbstate} the {rgbcolor} led",
+                        "{rgbcolor} led {rgbstate}",
+                        "turn {rgbstate} the {rgbcolor} led",
+                        "turn the {rgbcolor} led {rgbstate}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "ctrlcolor",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "all"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "blue"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "green"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "red"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ctrlstate",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "toggle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
